@@ -1,4 +1,6 @@
 import numpy as np
+import os
+
 from PIL import Image as img
 
 def get_line(start, end):
@@ -59,7 +61,7 @@ def get_line(start, end):
     return points
 
 stt = str(input("entrez cord start point"))
-ed = str(input("entrez coord endpoint"))
+ed = str(input("entrez coord end point"))
 start = [ int(i) for i in stt.split()]
 end = [ int(i) for i in ed.split()]
 L=get_line( (start[0],start[1]),(end[0],end[1]) )
@@ -71,4 +73,6 @@ for tuple in L:
     matrix[i][j]=0
 # print(matrix)
 im = img.fromarray(255*matrix, mode='L')
-im.save(fp="line.png")
+dir_path = os.path.dirname(os.path.realpath(__file__))
+file_path = os.path.join(dir_path,'line.png')
+im.save(fp=file_path)
