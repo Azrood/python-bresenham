@@ -71,4 +71,4 @@ for tuple in L:
     matrix[i][j]=0
 # print(matrix)
 im = img.fromarray(255*matrix, mode='L')
-im.save(fp="stackoverflow.png")
+im.save(fp="line.png")
