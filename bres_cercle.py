@@ -14,9 +14,9 @@ def circleBres(xc,yc,r)  :
 
         x+=1
 
-        # // check for decision parameter
-        # // and correspondingly
-        # // update d, x, y
+        #  check for decision parameter
+        #  and correspondingly
+        #  update d, x, y
         if (d > 0):
             y-=1
             d = d + 4 * (x - y) + 10
@@ -26,6 +26,7 @@ def circleBres(xc,yc,r)  :
         drawCircle(xc, yc, x, y,im)
     dir_path = os.path.dirname(os.path.realpath(__file__))
     file_path = os.path.join(dir_path,"circle.png")
+    im.show()
     im.save(fp=file_path)
 
 def drawCircle(xc, yc ,x, y,im):
@@ -38,3 +39,4 @@ def drawCircle(xc, yc ,x, y,im):
     im.putpixel((xc-y, yc+x), 0)
     im.putpixel((xc+y, yc-x), 0)
     im.putpixel((xc-y, yc-x), 0)
+

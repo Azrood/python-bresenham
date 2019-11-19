@@ -66,7 +66,7 @@ start = [ int(i) for i in stt.split()]
 end = [ int(i) for i in ed.split()]
 L=get_line( (start[0],start[1]),(end[0],end[1]) )
 
-matrix=np.ones((768,1366),dtype=np.uint8)
+matrix=np.ones((1000,1000),dtype=np.uint8)
 for tuple in L:
     i=tuple[0]
     j=tuple[1]
